@@ -64,11 +64,20 @@ namespace module_02
 
             // ----------Unit 2.6----------
 
-            var date = "9/10/2019 10:00:00 PM";
-            var parsedDate = DateTimeOffset.ParseExact(date, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
-            parsedDate = parsedDate.ToOffset(TimeSpan.FromHours(10));
-            var formattedDate = parsedDate.ToString("o");
-            Console.WriteLine(formattedDate);
+            //var date = "9/10/2019 10:00:00 PM";
+            //var parsedDate = DateTimeOffset.ParseExact(date, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+            //parsedDate = parsedDate.ToOffset(TimeSpan.FromHours(10));
+            //var formattedDate = parsedDate.ToString("o");
+            //Console.WriteLine(formattedDate);
+
+
+
+            // ----------Unit 2.7----------
+
+            var now = DateTimeOffset.UtcNow;
+
+            Console.WriteLine(now);
+            Console.WriteLine(now.ToLocalTime());
         }
     }
 }

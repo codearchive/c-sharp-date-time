@@ -26,16 +26,31 @@ namespace module_02
             //}
 
 
+
             // ----------Unit 2.3---------- 
 
-            var now = DateTime.Now;
+            //var now = DateTime.Now;
 
-            TimeZoneInfo sydneyTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. Australia Standard Time");
+            //TimeZoneInfo sydneyTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. Australia Standard Time");
 
-            var sydneyTime = TimeZoneInfo.ConvertTime(now, sydneyTimeZone);
+            //var sydneyTime = TimeZoneInfo.ConvertTime(now, sydneyTimeZone);
 
-            Console.WriteLine(now);
-            Console.WriteLine(sydneyTime);
+            //Console.WriteLine(now);
+            //Console.WriteLine(sydneyTime);
+
+
+
+            // ----------Unit 2.4---------- 
+
+            var time = DateTimeOffset.Now.ToOffset(TimeSpan.FromHours(5));
+
+            foreach (var timeZone in TimeZoneInfo.GetSystemTimeZones())
+            {
+                if (timeZone.GetUtcOffset(time) == time.Offset)
+                {
+                    Console.WriteLine(timeZone);
+                }
+            }
         }
     }
 }

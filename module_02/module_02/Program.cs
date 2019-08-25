@@ -51,15 +51,24 @@ namespace module_02
 
             // ----------Unit 2.5----------
 
-            var date_0 = "9/10/2019 10:00:00 PM";
-            var parsedDate_0 = DateTime.ParseExact(date_0, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
-            Console.WriteLine(parsedDate_0);
+            //var date_0 = "9/10/2019 10:00:00 PM";
+            //var parsedDate_0 = DateTime.ParseExact(date_0, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+            //Console.WriteLine(parsedDate_0);
 
-            var date_1 = "2019-07-01 10:00:00 PM +02:00";
-            var parsedDate_1 = DateTime.Parse(date_1, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
-            Console.WriteLine(parsedDate_1);
-            Console.WriteLine(parsedDate_1.Kind);
+            //var date_1 = "2019-07-01 10:00:00 PM +02:00";
+            //var parsedDate_1 = DateTime.Parse(date_1, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
+            //Console.WriteLine(parsedDate_1);
+            //Console.WriteLine(parsedDate_1.Kind);
 
+
+
+            // ----------Unit 2.6----------
+
+            var date = "9/10/2019 10:00:00 PM";
+            var parsedDate = DateTimeOffset.ParseExact(date, "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+            parsedDate = parsedDate.ToOffset(TimeSpan.FromHours(10));
+            var formattedDate = parsedDate.ToString("o");
+            Console.WriteLine(formattedDate);
         }
     }
 }

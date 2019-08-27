@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C7BAABC5-3F90-40A1-BC0E-A552A94B98B0}</ProjectGuid>
+    <ProjectGuid>{D6F89AC5-5CCA-4F4B-AF7D-0CE128103F5D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>module_03</RootNamespace>
-    <AssemblyName>module_03</AssemblyName>
+    <RootNamespace>module_3_3</RootNamespace>
+    <AssemblyName>module_3_3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,9 +31,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>module_03.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
